@@ -47,7 +47,7 @@ const getData = async ()=>{
 
   return (
     <Container >
-    <InputGroup className="mb-3 w-50">
+    <InputGroup className="mb-3 w-25">
         <Form.Control
           name="search"
           placeholder="Search for a city"
