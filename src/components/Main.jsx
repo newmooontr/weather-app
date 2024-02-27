@@ -47,8 +47,8 @@ const getData = async ()=>{
 
   return (
     <Container >
-    <InputGroup className="mb-3 w-25">
-        <Form.Control
+    <InputGroup className="mb-3 w-25 ">
+        <Form.Control 
           name="search"
           placeholder="Search for a city"
           aria-label="Recipient's username"
