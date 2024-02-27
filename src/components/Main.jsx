@@ -6,7 +6,8 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import CardStyle from './Card';
 
-
+const apiUrl = process.env.REACT_APP_API_URL;
+const apiKey = process.env.REACT_APP_API_KEY;
 
 
 //localStorage.setItem(
@@ -20,22 +21,20 @@ const Main = () => {
   const [weatherData, setWeatherData]= useState()
 
 
-  const tokenKey = localStorage.getItem("tokenKey");
+  
   const inputValue = search;
-  const units = "metric";
   const lang = "tr";
 
-  const baseurl = `http://api.weatherapi.com/v1`; 
 
 
 
 const handleSearch = (event) =>{
-  console.log(search)
+  
 
 const getData = async ()=>{
-  const url = `${baseurl}/current.json?key=799b62f210af49be99d114946232105&q=${inputValue}&lang=${lang}`
+  const url = `${apiUrl}/current.json?key=${apiKey}&q=${inputValue}&lang=${lang}`
       const {data} = await axios.get(url,);
-      console.log(data)
+    
       setWeatherData(data);
     };
 
