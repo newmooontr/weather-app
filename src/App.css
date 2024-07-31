@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  background: url('assets/clouds.jpeg') no-repeat;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -36,3 +39,12 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* .hot {
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+}
+
+.regular {
+  background-image: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+} */

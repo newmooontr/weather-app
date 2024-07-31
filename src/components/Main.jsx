@@ -5,6 +5,8 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import CardStyle from './Card';
+import Clouds from '../assets/clouds.jpeg';
+
 
 const apiUrl = process.env.REACT_APP_API_URL;
 const apiKey = process.env.REACT_APP_API_KEY;
@@ -45,8 +47,10 @@ const getData = async ()=>{
   }
 
   return (
-    <Container >
-    <InputGroup className="mb-3 w-25 ">
+    <>
+    
+    <Container className='w-100 flex-grow-1 d-flex flex-column align-items-center pt-5'>
+    <InputGroup className="mb-3 w-25">
         <Form.Control 
           name="search"
           placeholder="Search for a city"
@@ -54,7 +58,7 @@ const getData = async ()=>{
           aria-describedby="basic-addon2"
           onChange={(e)=>setSearch(e.target.value)}
           />
-        <Button className='btn btn-danger text-white ' onClick={handleSearch} variant="outline-secondary" id="button-addon2">
+        <Button className='btn  text-black ' onClick={handleSearch} variant="outline-secondary" id="button-addon2">
           Search
         </Button>
       </InputGroup>
@@ -63,6 +67,8 @@ const getData = async ()=>{
       
 
     </Container>
+    </>
+    
   )
 }
 
